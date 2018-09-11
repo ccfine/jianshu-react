@@ -1,0 +1,14 @@
+{
+  "name": "jianshu-react",
+  "version": "1.0.0",
+  "description": "开发简书",
+  "main": "./src/index.js",
+  "scripts": {
+    
+  },
+  "keywords": [
+    "react、简书"
+  ],
+  "author": "ccfine",
+  "license": "ISC"
+}
