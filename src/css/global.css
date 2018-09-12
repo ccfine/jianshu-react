@@ -8,6 +8,10 @@
 html {
   font-size: 10px;
 }
+a {
+  color: #000;
+  text-decoration: none;
+}
 :global(.container) {
   position: absolute;
   top: 0;

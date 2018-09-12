@@ -29,7 +29,8 @@ module.exports = {
       page: path.join(__dirname, "../src/page"),
       css: path.join(__dirname, "../src/css"),
       action: path.join(__dirname, "../src/redux/action"),
-      reducer: path.join(__dirname, "../src/redux/reducer")
+      reducer: path.join(__dirname, "../src/redux/reducer"),
+      assets: path.join(__dirname, "../src/assets")
     }
   },
   module: {
