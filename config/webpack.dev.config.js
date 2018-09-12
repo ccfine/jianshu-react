@@ -1,6 +1,7 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const webpack = require("webpack")
 
 module.exports = {
   entry: path.join(__dirname, "../src/index.js"),
@@ -15,10 +16,12 @@ module.exports = {
     historyApiFallback: true,
     inline: true,
     open: true,
+    hot: true,
     overlay: {
       error: true
     }
   },
+  devtool: "eval-source-map",
   resolve: {
     alias: {
       component: path.join(__dirname, "../src/component"),
@@ -74,10 +77,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "../src/index.html"),
+      favicon: path.join(__dirname, "../src/assets/favicon.ico"),
       filename: "index.html"
     }),
     new ExtractTextPlugin({
       filename: "css/[name].css"
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ]
 }
