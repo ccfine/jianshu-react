@@ -4,7 +4,7 @@
 
 # webpack
 # react
-# redux、redux-thunk、react-redux
+# redux、redux-thunk、react-redux、redux-persist、redux-immutable
 # react-router-dom
 # es6
 # mock
