@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Switch, Route } from "react-router-dom"
-import Header from "component/header/Header.jsx"
+import Header from "container/header/Header.jsx"
 import Main from "page/main/Main.jsx"
 import styles from "./home.css"
 
