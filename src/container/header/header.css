@@ -6,5 +6,22 @@
   width: 100%;
   height: 56px;
   padding: 0 40px 0 20px;
-  box-shadow: 0 1px #F0F0F0;
+  border-bottom: 1px solid #F0F0F0;
+}
+.content-container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 100px;
+  height: 56px;
+  margin-right: 100px;
+}
+.home {
+  height: 56px;
+  line-height: 56px;
+  padding: 0 20px;
+}
+.home:hover {
+  background-color: #F5F5F5;
 }
