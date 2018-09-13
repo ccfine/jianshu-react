@@ -29,11 +29,10 @@ export default class App extends Component {
     ): (
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact component={ Home } />
           <Route path="/register" component={ Register } />
           <Route path="/login" component={ Login } />
           <Route path="/404" component={ Error } />
-          <Redirect to="/404" />
+          <Route path="/" component={ Home } />
         </Switch>
       </BrowserRouter>
     )
