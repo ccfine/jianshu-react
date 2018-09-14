@@ -22,9 +22,9 @@ export default class App extends Component {
 
   render () {
     return this.state.hasError? (
-      <div>
+      <div className="container">
         <Title title="出错啦！！！" />
-        <span>出错啦！！！</span>
+        <h1 className="error">出错啦！！！</h1>
       </div>
     ): (
       <BrowserRouter>

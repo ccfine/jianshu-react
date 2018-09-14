@@ -1,3 +1,7 @@
+.flex-middle {
+  display: flex;
+  align-items: center;
+}
 .container {
   position: fixed;
   top: 0;
@@ -6,22 +10,43 @@
   width: 100%;
   height: 56px;
   padding: 0 40px 0 20px;
-  border-bottom: 1px solid #F0F0F0;
-}
-.content-container {
-  display: flex;
-  align-items: center;
+  box-shadow: 0 1px #F0F0F0;
 }
 .logo {
   width: 100px;
   height: 56px;
   margin-right: 100px;
+  cursor: pointer;
 }
 .home {
   height: 56px;
   line-height: 56px;
   padding: 0 20px;
+  cursor: pointer;
 }
 .home:hover {
   background-color: #F5F5F5;
+}
+.search-container {
+  composes: flex-middle;
+  height: 38px;
+  margin-left: 20px;
+  padding: 0 4px 0 20px;
+  position: relative;
+  background-color: #eee;
+  border-radius: 20px;
+}
+.search {
+  width: 160px;
+  margin-right: 10px;
+  border: none; 
+  outline: none;
+  background-color: #eee;
+}
+.search-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #969696;
+  border-radius: 50%;
+  cursor: pointer;
 }
