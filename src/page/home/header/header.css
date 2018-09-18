@@ -10,6 +10,10 @@
   padding: 0 20px;
   cursor: pointer;
 }
+.color-cursor {
+  color: #969696;
+  cursor: pointer;
+}
 .container {
   position: fixed;
   top: 0;
@@ -34,8 +38,7 @@
 }
 .home {
   composes: vertical-middle;
-  padding: 0 20px;
-  cursor: pointer;
+  composes: padding-cursor;
 }
 .home:hover {
   background-color: #F5F5F5;
@@ -55,6 +58,9 @@
   outline: none;
   background-color: #eee;
 }
+.search::-webkit-input-placeholder {
+  color: #969696;
+}
 .search-btn {
   width: 30px;
   height: 30px;
@@ -66,16 +72,37 @@
   position: absolute;
   left: 0;
   top: 50px;
-  padding: 20px;
   z-index: 11;
+  width: 240px;
+  padding: 20px;
   background-color: #fff;
-  box-shadow: 0 0 5px 1px #E9E9E9;
+  box-shadow: 0 0 5px 2px #E9E9E9;
   border-radius: 5px;
 }
-.login {
-  padding: 0 10px;
+.list-header {
+  display: flex;
+  justify-content: space-between;
   color: #969696;
-  cursor: pointer;
+}
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+.list-item {
+  composes: color-cursor;
+  margin: 10px 10px 0 0;
+  padding: 1px 5px;
+  font-size: 1.3rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.list-item:hover {
+  border-color: #B4B4B4;
+}
+.login {
+  composes: color-cursor;
+  padding: 0 10px;
 }
 .theme {
   composes: vertical-middle;

@@ -8,11 +8,11 @@ import styles from "./header.css"
 export default class Header extends Component {
   constructor () {
     super()
-    this.handleBackHome = this.handleBackHome.bind(this)
+    this.handleSwitchHome = this.handleSwitchHome.bind(this)
     this.handleSwicthLogin = this.handleSwicthLogin.bind(this)
   }
 
-  handleBackHome () {
+  handleSwitchHome () {
     this.props.history.push("/")
   }
 
@@ -24,14 +24,25 @@ export default class Header extends Component {
     return (
       <div className={ styles.container }>
         <div className={ styles["content-container"] }>
-          <img src={ logo } alt="简书logo" onClick={ this.handleBackHome } className={ styles.logo } />
-          <span onClick={ this.handleBackHome } className={ styles.home }>首页</span>
-          <span onClick={ this.handleBackHome } className={ styles.home }>下载App</span>
+          <img src={ logo } alt="简书logo" onClick={ this.handleSwitchHome } className={ styles.logo } />
+          <span onClick={ this.handleSwitchHome } className={ styles.home }>首页</span>
+          <span onClick={ this.handleSwitchHome } className={ styles.home }>下载App</span>
           <div className={ styles["search-container"] }>
             <input placeholder="搜索" className={ styles.search } />
             <div className={ styles["search-btn"] }></div>
             <div className={ styles["search-list"] }>
-              <span>热门搜索</span>
+              <div className={ styles["list-header"] }>
+                <span>热门搜索</span>
+                <div className={ styles["color-cursor"] }>换一批</div>
+              </div>
+              <ul className={ styles["list-container"] }>
+                <li className={ styles["list-item"] }>列表</li>
+                <li className={ styles["list-item"] }>列表</li>
+                <li className={ styles["list-item"] }>列表</li>
+                <li className={ styles["list-item"] }>列表</li>
+                <li className={ styles["list-item"] }>列表</li>
+                <li className={ styles["list-item"] }>列表</li>
+              </ul>
             </div>
           </div>
         </div>

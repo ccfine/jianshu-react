@@ -8,6 +8,9 @@
 html {
   font-size: 10px;
 }
+ul {
+  list-style-type: none;
+}
 :global(.container) {
   position: absolute;
   top: 0;
