@@ -126,3 +126,13 @@
   color: #fff;
   background-color: #EA6F5A;
 }
+:global(.slide-enter) {
+  width: 120;
+}
+:global(.slide-enter-active) {
+  width: 180px;
+  transition: width 0.3s linear;
+}
+:global(.slide-enter-done) {
+  width: 180px;
+}
