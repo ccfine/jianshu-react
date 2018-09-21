@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import { withRouter } from "react-router-dom"
 import { CSSTransition } from "react-transition-group"
-import { fromJS } from "immutable"
 import logo from "assets/logo.png"
 import styles from "./header.css"
 
@@ -14,7 +13,7 @@ export default class Header extends Component {
       show: false
     }
     this.handleSwitchHome = this.handleSwitchHome.bind(this)
-    this.handleSlideUp = this.handleSlideUp.bind(this)
+    this.handleSlideToggle = this.handleSlideToggle.bind(this)
     this.handleSwicthLogin = this.handleSwicthLogin.bind(this)
   }
 
@@ -22,9 +21,9 @@ export default class Header extends Component {
     this.props.history.push("/")
   }
 
-  handleSlideUp () {
+  handleSlideToggle () {
     this.setState({
-      show: true
+      show: !this.state.show
     })
   }
 
@@ -40,14 +39,10 @@ export default class Header extends Component {
           <span onClick={ this.handleSwitchHome } className={ styles.home }>首页</span>
           <span onClick={ this.handleSwitchHome } className={ styles.home }>下载App</span>
           <div className={ styles["search-container"] }>
-            <CSSTransition
-              in={ this.state.show }
-              timeout={ 300 }
-              classNames="slide"
-            >
-              <input placeholder="搜索" onFocus={ this.handleSlideUp } className={ styles.search } />
+            <CSSTransition in={ this.state.show } timeout={ 300 } classNames="slide">
+              <input placeholder="搜索" onFocus={ this.handleSlideToggle } onBlur={ this.handleSlideToggle } className={ styles.search } />
             </CSSTransition>
-            <div className={ styles["search-btn"] }></div>
+            <div className={ this.state.show? styles["search-btn-active"]: styles["search-btn"] }></div>
             <div className={ styles["search-list"] }>
               <div className={ styles["list-header"] }>
                 <span>热门搜索</span>
