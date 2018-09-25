@@ -60,7 +60,7 @@ export default class Header extends Component {
           </div>
         </div>
         <div className={ styles["content-container"] }>
-          <span className={ styles.theme }>Aa</span>
+          <i className="iconfont">&#xe636;</i>
           <span className={ styles.login } onClick={ this.handleSwicthLogin }>登录</span>
           <div className={ styles.register }>注册</div>
           <div className={ styles.article }>写文章</div>

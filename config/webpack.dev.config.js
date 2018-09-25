@@ -71,6 +71,14 @@ module.exports = {
           name: "resource/[name].[ext]"
         },
         include: path.join(__dirname, "../src")
+      },
+      {
+        test: /\.(eot|svg|ttf|woff)$/,
+        loader: "url-loader",
+        options: {
+          name: "font/[name].[md5:hash:hex:7].[ext]"
+        },
+        include: path.join(__dirname, "../src")
       }
     ]
   },
