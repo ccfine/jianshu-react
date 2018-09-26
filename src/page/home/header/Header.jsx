@@ -42,7 +42,9 @@ export default class Header extends Component {
             <CSSTransition in={ this.state.show } timeout={ 300 } classNames="slide">
               <input placeholder="搜索" onFocus={ this.handleSlideToggle } onBlur={ this.handleSlideToggle } className={ styles.search } />
             </CSSTransition>
-            <div className={ this.state.show? styles["search-btn-active"]: styles["search-btn"] }></div>
+            <div className={ this.state.show? styles["search-btn-active"]: styles["search-btn"] }>
+              <i className={ styles["search-icon"] }>&#xe64a;</i>
+            </div>
             <div className={ styles["search-list"] }>
               <div className={ styles["list-header"] }>
                 <span>热门搜索</span>
@@ -63,7 +65,10 @@ export default class Header extends Component {
           <i className={ styles.theme }>&#xe636;</i>
           <span className={ styles.login } onClick={ this.handleSwicthLogin }>登录</span>
           <div className={ styles.register }>注册</div>
-          <div className={ styles.article }>写文章</div>
+          <div className={ styles.article }>
+            <i className={ styles["article-icon"] }>&#xe645;</i>
+            写文章
+          </div>
         </div>
       </div>
     )

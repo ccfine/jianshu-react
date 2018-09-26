@@ -89,13 +89,20 @@
 .search-btn {
   width: 30px;
   height: 30px;
+  line-height: 30px;
+  text-align: center;
   background-color: #eee;
   border-radius: 50%;
   cursor: pointer;
 }
 .search-btn-active {
   composes: search-btn;
+  color: #fff;
   background-color: #969696;
+}
+.search-icon {
+  composes: iconfont from "css/iconfont.css";
+  font-size: 2.4rem;
 }
 .search-list {
   position: absolute;
@@ -157,4 +164,9 @@
   composes: padding-cursor;
   color: #fff;
   background-color: #EA6F5A;
+}
+.article-icon {
+  composes: iconfont from "css/iconfont.css";
+  font-size: 1.8rem;
+  margin-right: 5px;
 }
