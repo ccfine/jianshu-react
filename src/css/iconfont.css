@@ -7,7 +7,7 @@
   url('assets/iconfont/iconfont.svg?t=1537886802380#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-:global(.iconfont) {
+.iconfont {
   font-family:"iconfont" !important;
   font-size:16px;
   font-style:normal;

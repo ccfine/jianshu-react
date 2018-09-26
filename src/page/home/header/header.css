@@ -135,8 +135,10 @@
   padding: 0 10px;
 }
 .theme {
+  composes: iconfont from "css/iconfont.css";
   composes: vertical-middle;
   composes: login;
+  font-size: 1.8rem;
 }
 .register {
   composes: content-container;
