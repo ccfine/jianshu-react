@@ -65,17 +65,24 @@ module.exports = {
       },
       {
         test: /\.(jpg|png)$/,
-        loader: "url-loader",
-        options: {
-          limit: 8192,
-          name: "resource/[name].[ext]"
-        },
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "resource/[name].[hash:5].[ext]"
+            }
+          },
+          // {
+          //   loader: "image-webpack-loader"
+          // }
+        ],
         include: path.join(__dirname, "../src")
       },
       {
         test: /\.(eot|svg|ttf|woff)$/,
         loader: "url-loader",
         options: {
+          limit: 8192,
           name: "font/[name].[md5:hash:hex:7].[ext]"
         },
         include: path.join(__dirname, "../src")
