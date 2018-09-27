@@ -72,9 +72,9 @@ module.exports = {
               name: "resource/[name].[hash:5].[ext]"
             }
           },
-          // {
-          //   loader: "image-webpack-loader"
-          // }
+          {
+            loader: "image-webpack-loader"
+          }
         ],
         include: path.join(__dirname, "../src")
       },
